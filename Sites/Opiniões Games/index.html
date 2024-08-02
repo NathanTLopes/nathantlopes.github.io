@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aqui você verá as minhas opiniões sobre jogos.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="Nathan Teixeira Lopes">
+    <title>Opiniões sobre jogos</title>
+    <link rel="stylesheet" href="css/stylesinicial.css">
+    <link rel="shortcut icon" href="img/logodosite.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Login</h1>
+            <input id="meuInput" type="text" placeholder="Nome">
+            <br>
+            <br>
+            <a href="indexmenu.html"><button onclick="salvarInput()">Entrar</button></a>
+        </div>
+        <script>
+            function salvarInput() {
+                var meuInput = document.getElementById('meuInput').value;
+                localStorage.setItem('meuInput', meuInput);
+                window.location.href = 'pagina2.html';
+            }
+        </script>
+    </main>
+</body>
+</html>

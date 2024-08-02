@@ -1,0 +1,133 @@
+body {
+    background: url(../img/telamenu.gif);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    border-bottom: 5px solid white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+nav {
+    text-align: right;
+    margin-top: 15px;
+}
+
+#elemento2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: baseline;
+}
+
+#Imagem {
+    width: 5%;
+}
+
+#principal {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 50px;
+    text-decoration: none;
+}
+
+#nave {
+    display: inline-flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 100px;
+    text-decoration: none;
+}
+
+#nave::before {
+    content: "";
+    background-color: blueviolet;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+}
+
+h1 {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 15px;
+    color:whitesmoke;
+    font-size: 50px;
+    text-align: center;
+    border: solid 3px whitesmoke;
+    width: max-content;
+    margin: auto;
+    cursor: context-menu;
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 15px;
+    color:whitesmoke;
+    text-align:left;
+    font-size: 20px;
+    width: 70%;
+    border: solid 3px rebeccapurple;
+    cursor: context-menu;
+}
+.botao {
+    border: solid 5px rgb(4, 89, 150);
+    border-radius: 25px;
+    color: white;
+    background-color: rgb(4, 89, 150);
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    align-items: center;
+    width: 24.8%;
+}
+
+.botao:hover {
+    background-color: rgb(4, 89, 150);
+    color: white;
+    transform: scale(1.2);
+}
+
+.link {
+    color: whitesmoke;
+}
+
+.trecho {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 15px;
+    color:whitesmoke;
+    text-align:left;
+    font-size: 15px;
+    width: max-content;
+}
+
+iframe {
+    border: solid 3px red;
+}
+img {
+    border: solid 3px cyan;
+}
+footer{
+    color: whitesmoke;
+    height: 3vh;
+    text-align: center;
+    position: relative;
+    margin-top: 20px; 
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 5px;
+    border-radius: 15px;
+    width: max-content;
+    margin: auto;
+    cursor: context-menu;
+}
