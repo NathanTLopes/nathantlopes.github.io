@@ -106,23 +106,32 @@ header{
 }
 
 /* social icons */
-
-.social-icons{
-    list-style: none;
+.social-footer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+.social-icons {
     display: flex;
-    margin-bottom: 30px;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
 }
-.social-icons li{
-    width: 30px;
-    font-size: 1rem;
+
+.social-icons li {
+    margin: 0 10px; 
 }
-.social-icons li a{
-    text-decoration: none;
+
+.social-icons li a {
     color: #909096;
+    text-decoration: none;
 }
-.social-icons li a:hover{
+
+.social-icons li a:hover {
     color: #fdb808;
 }
+
 
 /* nav bar ends here */
 
