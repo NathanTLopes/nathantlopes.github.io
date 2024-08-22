@@ -323,7 +323,85 @@ header{
     opacity: 1;
 }
 
+/* contato section */
 
+/* contato section */
+.contact-section{
+    width: 100%; /* Alterado para usar 100% da largura disponível */
+    margin: 50px auto; /* Espaço entre seções */
+    padding: 50px 1.5rem; /* Adicionei padding para espaçamento interno */
+    position: relative;
+    background-color: #1d1d1d; /* Adicionado para manter o padrão de cor */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    border-radius: 8px; /* Cantos arredondados */
+}
+.contact-section h2{
+    font-size: 2rem; /* Tamanho ajustado */
+    color: #fdb808; /* Cor destacada */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+}
+.contact-section p{
+    width: 100%; /* Ajustado para 100% */
+    font-size: 1rem; /* Fonte ajustada */
+    line-height: 1.8rem; /* Altura da linha ajustada */
+    color: #adabab;
+    margin-bottom: 2rem; /* Espaço abaixo do texto */
+}
+.contact-section span{
+    font-family: 'sans-serif', cursive;
+    color: #CC6C06;
+}
+.contact-section h1{
+    font-size: 7rem;
+    color: #3a3939;
+    position: absolute;
+    left: -50px; /* Ajustado para alinhamento */
+    top: 50px; /* Ajustado para não sobrepor o conteúdo */
+    z-index: -999;
+    opacity: 0.2; /* Tornado mais sutil */
+}
+.contact-form-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column; /* Mantido em coluna para telas menores */
+    gap: 1rem; /* Espaço entre itens */
+}
+
+/* Inputs e textarea */
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Alinhamento em coluna */
+    gap: 1rem; /* Espaço entre os campos do formulário */
+    font-family: 'Roboto', sans-serif;  
+}
+input[type="text"], input[type='email'], textarea{
+    width: 100%; /* Garantir que ocupe a largura total */
+    height: 50px;
+    outline: none;
+    border: none;
+    background: #3a3939;
+    padding: 5px 20px;
+    border-right: 1px solid #CC6C06;
+    color: #adabab;
+    border-radius: 4px; /* Adicionando bordas arredondadas */
+}
+textarea{
+    height: 150px; /* Altura ajustada para o textarea */
+}
+
+input[type="submit"]{
+    width: 100%; /* Garantir que ocupe a largura total */
+    height: 50px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #CC6C06;
+    color: #1d1d1d;
+    font-size: 1rem;
+    border-radius: 4px; /* Adicionando bordas arredondadas */
+}
 
 /* media section */
 
@@ -413,5 +491,23 @@ header{
     .fake-magicwall ul li{
         width: 242px;
         height: 236px;
+    }
+    .contact-section{
+        width: 85%; /* Reduzido para não ocupar toda a largura */
+        margin: 150px 0 0 auto;
+        padding: 50px 2rem;
+    }
+    .contact-form-wrapper{
+        flex-direction: row; /* Alterado para linha em telas maiores */
+        align-items: flex-start;
+    }
+    input[type="text"], input[type='email']{
+        width: 48%; /* Ajustado para lado a lado */
+    }
+    #text, textarea{
+        width: 100%;
+    }
+    input[type="submit"]{
+        width: 30%; /* Ajustado o botão para uma largura menor */
     }
 }
