@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+   scroll-behavior: smooth; 
+}
 *,
 ::before,
 ::after{
