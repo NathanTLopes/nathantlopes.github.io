@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 .container{
     max-width: 1280px;
@@ -26,7 +26,7 @@ header.rolagem{
     padding: 20px 4%;
 }
 header.rolagem a {
-     color: #FE775A;
+     color: #eb6517;
 }
 header img{
     width: 90px;
@@ -48,27 +48,12 @@ header ul li a{
     width: 120px;
     height: 40px;
     border: 0;
-    background-color: #FE775A;
+    background-color: #eb6517;
     color: #fff;
     cursor: pointer;
     transition: .2s;
 }
-.banner{
-    height: 100vh;
-    background-image: url('../img/81529.jpg');
-    background-position: 100% 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.banner h1{
-    font-size: 4em;
-}
-.banner h1 span{
-    color: #e1ff00;
-}
+
 .nav-list {
     list-style: none;
     display: flex;
