@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Nathan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="shortcut icon" href="img/logocopy.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="btns-container">
+            <i class="bi bi-list"></i>
+            <i class="bi bi-x-lg"></i>
+        </div>
+    </header>
+
+    <!-- sidebar -->
+    <aside class="aside">
+        <div class="aside-wrapper">
+            <div class="logo-section">
+                <a class="logo" rel="home" href="#">
+                    <img src="img/logo.png" alt="logo">
+                    <span>Nathan</span>
+                </a>
+            </div>
+
+            <nav class="nav-links">
+                <a href="https://nathantlopes.github.io/">Pág. Inicial</a>
+                <a href="#section-work">Sobre</a>
+                <a href="#home-magicwall">Projetos</a>
+                <a href="#contact">Contato</a>
+            </nav>
+            <!-- icones sociais -->
+            <footer class="social-footer">
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://www.instagram.com/nathanteixeira55/" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/NathanTLopes" target="_blank">
+                            <i class="bi bi-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.whatsapp.com/send?phone=69984320367" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </aside>
+
+    <!-- zona de texto 1 -->
+    <section id="section-home" class="section-home">
+        <div class="text-zone">
+            <h1>Olá, <br> Bem vindo ao <br>Meu <span>portfólio.</span></h1>
+            <p class="gray-text">Feito por um aluno apredendo a mexer em Front End<br>Espero que goste 😅👌</p>
+            <br>
+        </div>
+    </section>
+    <!-- zona de texto 2 -->
+    <section id="section-work">
+        <div id="header">
+            <h2>Meu portfolio</h2>
+        </div>
+        <div class="text-zone-2">
+            <div>
+                <p>Prazer, meu nome completo é Nathan Teixeira Lopes e eu tenho 17 anos,
+                    nasci 05/07/2007 e eu sou aluno de informática.
+                    Esse é o meu primeiro portfólio e espero que ele esteja agradável! Se fosse possivél
+                    gostaria que mandasse sua opinião em "Contatos".
+                    A idéia desse portfólio é para acessar e armazenar os meus sites mais facilmente e mostrar
+                    os meus trabalhos para o público que for visitar esse portfólio.
+                    <br>
+                    Interesse de saber onde tirei a inspiração de portfólio? Acesse <a href="https://www.youtube.com/@Almarexwebdev">Almarex Web Dev</a> no Youtube.
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="img/Fotofalsaksksks.png" alt="Profile Image">
+                <div class="rotating-borders"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- magical wall section -->
+    <div id="home-magicwall" class="fake-magicwall">
+        <ul>
+            <li>
+                <div class="magic-wall_item lazyload">
+                    <img src="img/A ilha do tesouro.png" alt="A ilha do tesouro">
+                    <div class="hover-content"></div>
+                    <a href="https://nathantlopes.github.io/Atividades/atividade-01/" class="colorbox"></a>
+                </div>
+            </li>
+            <!-- magic wall 1 -->
+            <li>
+                <div class="magic-wall_item lazyload">
+                    <img src="img/flexbox.png" alt="flexbox">
+                    <div class="hover-content"></div>
+                    <a href="https://nathantlopes.github.io/Atividades/flexbox/" class="colorbox"></a>
+                </div>
+            </li>
+            <!-- magic wall 2 -->
+            <li>
+                <div class="magic-wall_item lazyload">
+                    <img src="img/Opinioes Games.png" alt="Opinioes Games">
+                    <div class="hover-content"></div>
+                    <a href="https://nathantlopes.github.io/Sites/Opini%C3%B5es%20Games/" class="colorbox"></a>
+                </div>
+            </li>
+            <!-- magic wall 3 -->
+            <li>
+                <div class="magic-wall_item lazyload">
+                    <img src="img/Viagem do gurismo.png" alt="Viagem do gurismo">
+                    <div class="hover-content"></div>
+                    <a href="https://nathantlopes.github.io/Sites/Viagem%20do%20Gurismo/" class="colorbox"></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="contact-section" id="contact">
+        <div class="contact-description">
+            <h2>Entre em contato comigo</h2>
+            <p>Para quem querer dar a sua humilde opinião sobre
+                os meus sites, sobre esse portfólio ou
+                quer tirar uma dúvida...
+            </p>
+            <span>Vamos falar sobre!</span>
+        </div>
+        <div class="contact-form-wrapper">
+            <form action="https://formsubmit.co/texeiranathan20@gmail.com" method="POST">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email" id="email"><br>
+                <input type="text" id="text" placeholder="Assunto"><br> 
+                <textarea name="text" placeholder="Digite a sua mensagem..."></textarea><br>
+                <input type="submit" value="Enviar a minha mensagem">
+            </form>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
