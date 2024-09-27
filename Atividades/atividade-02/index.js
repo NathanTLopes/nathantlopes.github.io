@@ -29,3 +29,9 @@ lista.appendChild(linha2);
 lista.appendChild(linha3);
 
 body.appendChild(lista);
+
+const p = document.createElement('p');
+p.textContent = 'Meu parágrafo dos cria';
+p.style.color = 'blue';
+body.style.background = '#0000';
+body.prepend(p)
