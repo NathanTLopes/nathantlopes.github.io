@@ -1,37 +1,65 @@
-const body = document.querySelector('body');
-const ancora = document.createElement('a');
-ancora.setAttribute('href', 'https://www.ifro.edu.br');
-ancora.textContent = 'IFRO';
-ancora.style.color = '#f00';
-ancora.style.textDecoration = 'none';
-ancora.style.fontWeight = 'bold';
-ancora.style.fontSize = '20px';
+// Definindo o array de objetos com os itens do menu
+const itensMenu = [
+  { nome: 'Início', url: 'index.html' },
+  { nome: 'Sobre', url: 'sobre.html' },
+  { nome: 'Contato', url: 'contato.html' }
+];
 
-body.appendChild(ancora);
+// Função responsável por criar a estrutura do menu e aplicar os estilos
+function criarMenu() {
+  // Cria o elemento <header>
+  const header = document.createElement('header');
+  
+  // Estilo do cabeçalho
+  header.style.backgroundColor = '#071D41';
+  header.style.fontFamily = 'Arial, sans-serif';
 
-const titulo = document.querySelector('h1');
-titulo.remove();
+  // Cria o elemento <nav> dentro do header
+  const nav = document.createElement('nav');
+  header.appendChild(nav);
 
+  // Cria a lista não ordenada <ul> dentro do nav
+  const ul = document.createElement('ul');
+  nav.appendChild(ul);
 
+  // Estilo para a lista <ul>
+  ul.style.display = 'flex';
+  ul.style.justifyContent = 'center';
+  ul.style.alignItems = 'center';
+  ul.style.height = '40px';
+  ul.style.gap = '20px';
+  ul.style.listStyleType = 'none'; // Remove marcadores da lista
 
-const linha = document.createElement('li');
-const linha2 = document.createElement('li');
-const linha3 = document.createElement('li');
+  // Chama a função para popular o menu
+  popularMenu(ul);
 
-linha.textContent = 'item-1';
-linha2.textContent = 'item-2';
-linha3.textContent = 'item-3';
+  // Adiciona o header ao início do body
+  document.body.prepend(header);
+}
 
+// Função que percorre o array e adiciona os itens ao menu
+function popularMenu(ul) {
+  itensMenu.forEach(item => {
+    // Cria o elemento de lista <li>
+    const li = document.createElement('li');
 
-const lista = document.createElement('ul');
-lista.appendChild(linha);
-lista.appendChild(linha2);
-lista.appendChild(linha3);
+    // Cria o link <a> dentro do <li>
+    const a = document.createElement('a');
+    a.textContent = item.nome;
+    a.href = item.url;
 
-body.appendChild(lista);
+    // Estilo para os links <a>
+    a.style.textDecoration = 'none'; // Remove sublinhado
+    a.style.color = 'white';         // Cor dos links
+    a.style.textTransform = 'uppercase'; // Texto em caixa alta
 
-const p = document.createElement('p');
-p.textContent = 'Meu parágrafo dos cria';
-p.style.color = 'blue';
-body.style.background = '#0000';
-body.prepend(p)
+    // Adiciona o link <a> dentro do <li>
+    li.appendChild(a);
+
+    // Adiciona o <li> na lista <ul>
+    ul.appendChild(li);
+  });
+}
+
+// Chama a função para criar o menu assim que a página carrega
+window.onload = criarMenu;
