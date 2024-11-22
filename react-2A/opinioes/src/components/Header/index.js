@@ -1,12 +1,21 @@
+'use client';
 import Link from "next/link";
+import {useState} from "react"
 
-export default function Header() {
-    return(
-        <nav>
-            <ul>
-                <li><Link href="/Sobre">Sobre</Link></li>
-                <li><Link href="/contato">Contato</Link></li>
-            </ul>
-        </nav>
+export default function Header (){
+    const [showMenu, setShowMenu] = useState(true)
+    return (
+        <header>
+            <button onClick={()=>setShowMenu(!showMenu)}>Clique</button>
+            {
+                showMenu &&
+                <nav>
+                    <ul>
+                        <li><Link href="/Sobre">Sobre</Link></li>
+                        <li><Link href="/contato">Contato</Link></li>
+                    </ul>
+                </nav>
+            }
+        </header>
     )
 }
