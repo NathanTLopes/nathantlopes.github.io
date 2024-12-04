@@ -28,7 +28,7 @@ export default function listas() {
             raca:'Pastor Alemão',
         },
     ]
-    return (
+    return 
         <div>
             <h1>listas</h1>
             <h2>Lista comum</h2>
