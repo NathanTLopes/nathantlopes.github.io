@@ -1,7 +1,7 @@
 'use client';
 import Link from "next/link";
 import {useState} from "react"
-
+import Header from "@/components/Header"
 export default function Header (){
     const [showMenu, setShowMenu] = useState(true)
     return (
@@ -13,6 +13,7 @@ export default function Header (){
                     <ul>
                         <li><Link href="/Sobre">Sobre</Link></li>
                         <li><Link href="/contato">Contato</Link></li>
+                        <li><Link href="/listas">Listas</Link></li>
                     </ul>
                 </nav>
             }
