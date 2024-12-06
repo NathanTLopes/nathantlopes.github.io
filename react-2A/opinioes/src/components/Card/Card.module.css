@@ -1,0 +1,7 @@
+.div {
+    border: 1px solid #777;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

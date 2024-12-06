@@ -28,22 +28,22 @@ export default function listas() {
             raca:'Pastor Alemão',
         },
     ]
-    return 
-        <div>
-            <h1>listas</h1>
-            <h2>Lista comum</h2>
-            <ul>
-                {racas.map((raca, i) => (
-                    <li key={i}>{i+1} - {raca}</li>
+    return (
+    <div>
+        <h1>listas</h1>
+        <h2>Lista comum</h2>
+        <ul>
+            {racas.map((raca, i) => (
+                <li key={i}>{i+1} - {raca}</li>
                 ))}
-            </ul>
-            <h2>Lista de Objetos</h2>
-            {racasObj.map((racaObj) => (
-                <div key={racasObj.id}>
-                    <h3>{racaObj.id}</h3>
-                    <p>{racasObj.raca}</p>
-                </div>
-            ))}
-
-        </div>
+        </ul>
+        <h2>Lista de Objetos</h2>
+        {racasObj.map((racaObj) => (
+            <div key={racasObj.id}>
+                <h3>{racaObj.id}</h3>
+                <p>{racasObj.raca}</p>
+            </div>
+        ))}
+    </div>
+    )
 }
