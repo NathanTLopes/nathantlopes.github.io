@@ -1,15 +1,13 @@
 'use client';
-
 import { useEffect, useState } from "react";
-export default function Efeitos(){
-    //const [cont, setCont] = useState(0);
-    //const [cont2, setCont2] = useState(0);
+export default function Efeitos() {
     const [ufs, setUfs] = useState([]);
-    
-
+    const [ufSelected, setUfSelected] = useState('');
+    const [cities, setCities] = useState([]);
+    const [citySelected, setCitySelected] = useState('')
     const getUfs = async ()=> {
         try{
-            const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados');
+            const response = await fetch('https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome');
             if(!response.ok){
                 throw new Error('Erro ao buscar dados: '+ response.statusText);
             }
@@ -19,30 +17,56 @@ export default function Efeitos(){
             console.log('Ocorreu algum erro: ' + error)
         }
     }
+    const getCities = async () => {
+        try {
+            const response = await fecth ('https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufSelected}municipios?orderBy=nome')
+            if(!response.ok){
+                throw new Error('Erro ao buscar dados: '+ response.statusText);
+            }
 
+            const data = await response.json();
+            setCities(data);
+            console.log(data);
+        }   catch (error) {
+                console.log('Ocorreu algum erro: ' + error)
+        }
+    }
     useEffect(() => {
         getUfs();
     }, [])
 
-    //useEffect(()=> {
-        //console.log('Renderizou')
-    //},[cont])
+    useEffect(()=> {
+        getCities();
+    }, [ufSelected])
     return (
-        //<div>
-            //<h1>Efeitos Colaterais / Use useEffect</h1>
-            //<button onClick={() => (setCont(cont + 1))}>Adicionar</button>
-            //<p>Renderizações cont1: {cont}</p>
-            //<button onClick={() => (setCont(cont + 1))}>Adicionar</button>
-            //<p>Renderizações cont2: {cont2}</p>
-        //</div>
         <div>
+            <h1>Efeitos Colaterais / Use useEffect</h1>
             {
-                <ul>
-                    {ufs.map(uf => (
-                        <li key={nome}>{uf.nome}</li>
+                <select onChangeCapture={(ev) =>{setUfSelected(ev.target.value), setCitySelected('')}}>
+                    <option value="Selecione o estado"></option>
+                    {ufs.map((uf) => (
+                        <option 
+                            value={uf.id} 
+                            key={uf.id}>
+                            {`${uf.nome} - ${uf.sigla}`}
+                        </option>
                     ))}
-                </ul>
+                </select>
             }
+
+            {
+                <select onChange={(ev) => setCitySelected(ev.target.value)}>
+                    <option value="">Selecione a cidade</option>
+                    {cities.map((city) =>(
+                        <option 
+                            value={city.nome} 
+                            key={city.id}>
+                            {`${city.nome}`}
+                        </option>
+                    ))}
+                </select>
+            }
+            {citySelected?<p>{citySelected}</p>:<p>Aguardando!</p>}
         </div>
     )
 }
